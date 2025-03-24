@@ -35,7 +35,7 @@ export const useBlogStore = create((set, get) => ({
         try {
             const res = await axiosUrl.delete(`/blog/${blogId}`);
             if (res.data.success) {
-                set((prev) => ({blogs: prev.blogs.filter((blog) => blog._id !== blogId)}))
+                set((prev) => ({userBlogs: prev.userBlogs.filter((blog) => blog._id !== blogId)}))
                 toast.success(res.data.message);
             }
         } catch (error) {
