@@ -35,7 +35,7 @@ const UserBlog = () => {
             >
               <h3 className="text-lg sm:text-xl font-semibold">{blog.title}</h3>
               <hr />
-              <p className="text-sm sm:text-base">{blog.blog}</p>
+              <p className="text-sm sm:text-base whitespace-pre-line">{blog.blog}</p>
               <hr />
               <div className="text-gray-600 text-sm flex items-center justify-between">
                 <p>{new Date(blog.createdAt).toDateString()}</p>

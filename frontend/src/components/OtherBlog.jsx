@@ -16,7 +16,7 @@ const OtherBlog = ({ blog }) => {
       <div className="bg-white shadow-slate-900 shadow-md rounded-lg p-6 space-y-2 hover:shadow-lg transition">
         <h3 className="text-md sm:text-xl font-semibold">{blog.title}</h3>
         <hr />
-        <p className="text-sm sm:text-base">{blog.blog}</p>
+        <p className="text-sm sm:text-base whitespace-pre-line">{blog.blog}</p>
         <hr />
         <div className="text-gray-600 text-sm flex items-center justify-between">
           <p>{new Date(blog.createdAt).toDateString()}</p>

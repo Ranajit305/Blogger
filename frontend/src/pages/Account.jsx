@@ -6,7 +6,7 @@ const Account = () => {
 
   const fileInputRef = useRef(null);
 
-  const [image, setImage] = useState(user.profilePic || "avatar.png");
+  const [image, setImage] = useState(user?.profilePic || "avatar.png");
 
   const handleImageClick = () => {
     fileInputRef.current.click();
@@ -53,19 +53,19 @@ const Account = () => {
           </div>
           <div>
             <p className="text-gray-500 text-sm sm:text-base">
-              Name: {user.name}
+              Name: {user?.name}
             </p>
             <p className="text-gray-500 text-sm sm:text-base">
-              Email: {user.email}
+              Email: {user?.email}
             </p>
             <p className="text-gray-500 text-sm sm:text-base">
-              Followers: {user.followers.length}
+              Followers: {user?.followers?.length || 0}
             </p>
           </div>
         </div>
         <p className="text-gray-500 text-sm sm:text-base">
           Members Since:{" "}
-          {new Date(user.createdAt).toLocaleDateString("en-US", {
+          {new Date(user?.createdAt).toLocaleDateString("en-US", {
             day: "numeric",
             month: "long",
             year: "numeric",
