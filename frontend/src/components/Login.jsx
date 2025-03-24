@@ -27,6 +27,11 @@ const Login = ({ setLoginModal, setIsOpen }) => {
   return (
     <form onSubmit={handleLogin} className="fixed inset-0 z-50 text-black bg-[rgba(0,0,0,0.3)] flex items-center justify-center">
       <div className="bg-white p-8 m-5 rounded-lg shadow-lg">
+        <div className={`text-center border rounded-lg border-gray-300 mb-5 ${action !== 'Login' && 'hidden'}`}>
+          <h2 className="text-xl font-bold text-gray-800 mb-2">Demo User:</h2>
+          <p className="text-gray-600">Email: user@gmail.com</p>
+          <p className="text-gray-600">Password: 12345</p>
+        </div>
         <div className="flex items-center justify-between mb-4 text-gray-700">
           <h1 className="text-2xl uppercase">{action}</h1>
           <X onClick={() => setLoginModal(false)} className="cursor-pointer size-8 text-gray-500 hover:text-gray-700 transition duration-200" />
@@ -48,7 +53,7 @@ const Login = ({ setLoginModal, setIsOpen }) => {
             required
           />
         </div>}
-        
+
         {/* Email Input */}
         <div className="mb-4">
           <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
